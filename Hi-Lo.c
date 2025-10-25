@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
+/*
+ * Adding a banking system and a steak counter which increases the money gained by:
+ * 1.2 * BET * (STEAK / 2)
+ */
+
+
 enum GameState { WON, LOST };
 
 int cardGenerator(void);
@@ -57,7 +63,7 @@ enum GameState gameStateH(int card, int nextCard) {
 
   if (card < nextCard) 
     state = WON;
-  else if (card > nextCard)
+  else if (card >= nextCard)
     state = LOST;
 
   return state;
@@ -72,7 +78,7 @@ enum GameState gameStateH(int card, int nextCard) {
 enum GameState gameStateL(int card, int nextCard) {
   enum GameState state;
 
-  if (card < nextCard) 
+  if (card <= nextCard) 
     state = LOST;
   else if (card > nextCard)
     state = WON;
