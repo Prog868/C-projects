@@ -8,7 +8,7 @@ enum GameState { WON, LOST, CONTINUE };
 int cardGenerator(void);
 int houseCards(void);
 bool isGameOver(enum GameState);
-enum GameState gameState(int, int, char);
+enum GameState gameState(int, int);
 
 int main() {
   enum GameState state = CONTINUE;
@@ -24,7 +24,7 @@ int main() {
     scanf(" %c", &selection);
 
     if ('n' == selection) {
-      state = gameState(sum, house, selection);
+      state = gameState(sum, house);
       endGame = isGameOver(state);
       break;
     }
@@ -92,7 +92,7 @@ bool isGameOver(enum GameState state) {
  * @param sum Total sum of points
  * @return Game state
  */
-enum GameState gameState(int sum, int house, char selection) {
+enum GameState gameState(int sum, int house) {
   enum GameState state;
 
   if (house > 21) {
