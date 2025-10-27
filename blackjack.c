@@ -20,7 +20,7 @@ int main() {
   while (!endGame) {
     char selection;
 
-    puts("Would you like to draw a card? (Y/n)");
+    printf("%s", "Would you like to draw a card? (y/n) ");
     scanf(" %c", &selection);
 
     if ('n' == selection) {

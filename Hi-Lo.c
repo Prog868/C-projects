@@ -27,7 +27,7 @@ int main() {
 
   printf("%s%d\n", "The card is: ", card);
 
-  printf("%s", "Do you think the next card will be higher(h) or lower (l)? ");
+  printf("%s", "Do you think the next card will be higher (h) or lower (l)? ");
   scanf(" %c", &prediction);
 
   if ('h' == prediction) 
