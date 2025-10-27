@@ -38,7 +38,7 @@ int main() {
 
       sum += card;
 
-      printf("\n%s%d\n", "The card number is: ", sum);
+      printf("\n%s%d\n%s%d\n", "The card number is: ", card, "The sum is: ", sum);
     }
 
     if (sum > 21) {
