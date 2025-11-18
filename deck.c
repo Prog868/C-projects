@@ -29,8 +29,7 @@ int main() {
 }
 
 /**
- * @brief Shuffles the cards
- * @param deck is a 2D array
+ * Shuffles the cards
  */
 void shuffle(int deck[][FACES]) {
   for (size_t card = 1; card <= CARDS; card++) {
@@ -49,10 +48,7 @@ void shuffle(int deck[][FACES]) {
 }
 
 /**
-  * @brief Deals the cards
-  * @param deck 2D array
-  * @param face array of pointers containing the card number
-  * @param suit array of pointers containing the card suit
+  * Deals the cards
   */
 void deal(int deck[][FACES], const char *face[], const char *suit[]) {
   // untill all cards have been displayed
